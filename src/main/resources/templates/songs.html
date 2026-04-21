@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Songs</title>
+  </head>
+  <body>
+    <h1>Best Songs</h1>
+    <th:block th:object="${song}">
+      <h2 th:text="|Canzone *{id} : *{toString}|" />
+    </th:block>
+  </body>
+</html>
