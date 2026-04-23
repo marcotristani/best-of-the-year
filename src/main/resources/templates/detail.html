@@ -1,14 +1,9 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail</title>
-    <th:block th:replace="~{fragments/linkHead :: linkHead}" />
-  </head>
+  <head th:replace="~{fragments/head :: head(${element.getTitle()})}"></head>
   <body>
     <h1>Dettaglio</h1>
 
-    <p th:text="${element}" />
+    <p th:text="${element}"></p>
   </body>
 </html>

@@ -1,12 +1,8 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Best Movies</title>
-    <th:block th:replace="~{fragments/linkHead :: linkHead}" />
-  </head>
+  <head th:replace="~{fragments/head :: head('homepage')}"></head>
   <body class="bg-primary">
+    <th:block th:replace="~{fragments/navbar :: navbar}"></th:block>
     <div class="container py-5">
       <div class="p-4 bg-white border rounded-3 shadow-sm">
         <h1 class="h2 mb-0" th:text="'Best of the year by ' + ${name} "></h1>
