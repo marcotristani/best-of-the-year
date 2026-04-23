@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HomeController {
 
     @GetMapping("/home")
+    public String home(Model model) {
+        model.addAttribute("name", "Marco");
+        return "home";
+    }
+
+    @GetMapping("/home")
     public String getMethodName(@RequestParam(name = "name") String name, Model model) {
         model.addAttribute("name", name);
         return "home";

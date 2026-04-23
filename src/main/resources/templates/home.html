@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Movies</title>
+    <link
+      rel="stylesheet"
+      th:href="@{/webjars/bootstrap/5.3.3/dist/css/bootstrap.min.css}"
+    />
   </head>
-  <body>
-    <div>
-      <h1 th:text="'Best of the year by ' + ${name} " />
+  <body class="bg-primary">
+    <div class="container py-5">
+      <div class="p-4 bg-white border rounded-3 shadow-sm">
+        <h1 class="h2 mb-0" th:text="'Best of the year by ' + ${name} "></h1>
+      </div>
     </div>
   </body>
 </html>
