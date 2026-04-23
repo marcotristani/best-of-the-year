@@ -7,8 +7,12 @@
   </head>
   <body>
     <h1>Best Songs</h1>
-    <th:block th:object="${songs}">
-      <h2 th:text="|Canzone  : *{toString}|" />
+    <th:block th:each="song : ${songs}">
+      <div th:object="${song}">
+        <h2 th:text="|Canzone *{id}  : *{toString}|" />
+
+        <div>[[*{averageVote}]]</div>
+      </div>
     </th:block>
   </body>
 </html>
